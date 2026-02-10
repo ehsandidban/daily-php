@@ -1,4 +1,4 @@
 <?php
 
-#this is test
+#hi my friend
 #this is test 2
