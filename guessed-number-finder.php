@@ -1,10 +1,5 @@
 <?php
 
-$number = 78; // number specified in mind
-
-$low_limit = 0; // low limit of number
-$high_limit = 1000; // low limit of number
-
 function save_results(&$result, $try, $low_limit, $high_limit, $random_number)
 {
     $result[$try]['low'] = $low_limit;
@@ -37,4 +32,4 @@ function find_guess($number, $low_limit, $high_limit)
     while ($rnd != $number);
 }
 
-print_r(find_guess(50, 0, 100));
+print_r(find_guess(1693, 0, 10000));
