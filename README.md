@@ -1,2 +1,2 @@
 # daily-php
-my daily practices and tests.
+Consistent daily coding to sharpen backend and problem-solving skills
