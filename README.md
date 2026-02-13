@@ -14,4 +14,4 @@ The code finds the guessed number in some steps.
 
 ip-identify.php
 
-this function is just a simple practice for compare the prefix of ip any ip address to specified prefix.
+this function is just a simple practice for compare the prefix of any ip address to specified prefix.
