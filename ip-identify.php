@@ -9,4 +9,4 @@ function is_has_prefix($ip_address, $prefix)
     return "This ip address <strong><mark>($ip_address)</mark></strong> has not the prefix <strong><mark>$prefix</mark></strong>";
 }
 
-echo (is_has_prefix($user_ip, 15));
+echo (is_has_prefix($user_ip, '5'));
