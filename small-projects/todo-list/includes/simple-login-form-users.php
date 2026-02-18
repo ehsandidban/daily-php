@@ -1,0 +1,73 @@
+<?php
+return [
+    [
+        'username' => 'ehsan',
+        'password' => '123',
+        'name' => 'احسان',
+        'phone' => '09000000000',
+        'avatar' => 'images/ehsan.jpg',
+    ],
+    [
+        'username' => 'paria',
+        'password' => '123',
+        'name' => 'پریا',
+        'phone' => '09000000001',
+        'avatar' => 'images/paria.jpg',
+    ],
+    [
+        'username' => 'hojjat',
+        'password' => '123',
+        'name' => 'حجت',
+        'phone' => '09000000002',
+        'avatar' => 'images/hojjat.jpg',
+    ],
+    [
+        'username' => 'nastaran',
+        'password' => '123',
+        'name' => 'نسترن',
+        'phone' => '09000000003',
+        'avatar' => 'images/nastaran.jpg',
+    ],
+    [
+        'username' => 'mahdi',
+        'password' => '123',
+        'name' => 'مهدی',
+        'phone' => '09000000004',
+        'avatar' => 'images/mahdi.jpg',
+    ],
+    [
+        'username' => 'shakiba',
+        'password' => '123',
+        'name' => 'شکیبا',
+        'phone' => '09000000005',
+        'avatar' => 'images/shakiba.jpg',
+    ],
+    [
+        'username' => 'mozhgan',
+        'password' => '123',
+        'name' => 'مژگان',
+        'phone' => '09000000006',
+        'avatar' => 'images/mozhgan.jpg',
+    ],
+    [
+        'username' => 'leila',
+        'password' => '123',
+        'name' => 'لیلا',
+        'phone' => '09000000007',
+        'avatar' => 'images/leila.jpg',
+    ],
+    [
+        'username' => 'ebrahim',
+        'password' => '123',
+        'name' => 'ابراهیم',
+        'phone' => '09000000008',
+        'avatar' => 'images/ebrahim.jpg',
+    ],
+    [
+        'username' => 'shahla',
+        'password' => '123',
+        'name' => 'شهلا',
+        'phone' => '09000000009',
+        'avatar' => 'images/shahla.jpg',
+    ],
+];
