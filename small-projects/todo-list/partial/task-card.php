@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="task-title">
-            <a href="new.php">
+            <a href="new.php?edit=<?php echo $task['uid'] ?>">
                 <svg xmlns="http://www.w3.org/2000/svg" width="19.5" height="21.337" viewBox="0 0 19.5 21.337">
                     <g id="edit-2" transform="translate(-2.25 -1.413)">
                         <path id="Path_56" data-name="Path 56"

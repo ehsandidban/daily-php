@@ -58,23 +58,36 @@ function status_resolver($status)
     $statuses = [
         'queue' => 'در صف انجام',
         'doing' => 'در حال انجام',
-        'done'  => 'انجام شده',
+        'done' => 'انجام شده',
         'expire' => 'منقضی شده'
     ];
 
     return $statuses[$status];
 }
 
-function sort_tasks(&$tasks){
-    usort($tasks,function ($a, $b) {
+function sort_tasks(&$tasks)
+{
+    usort($tasks, function ($a, $b) {
         return $b['created_at'] <=> $a['created_at'];
     });
 }
 
-function delete_task($uid){
+function delete_task($uid)
+{
     $tasks = get_user_tasks();
-    $tasks = array_filter($tasks, function ($task) use ($uid ){
+    $tasks = array_filter($tasks, function ($task) use ($uid) {
         return $task['uid'] != $uid;
     });
     save_user_tasks($tasks);
+}
+
+function get_task($uid)
+{
+    $tasks = get_user_tasks();
+    foreach ($tasks as $task) {
+        if ($task['uid'] == $uid) {
+            return $task;
+        }
+    }
+    return false;
 }

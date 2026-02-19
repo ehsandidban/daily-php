@@ -13,6 +13,20 @@ if (isset($_POST['save_task'])) {
 
     redirect('tasklist');
 }
+
+$title = '';
+$progress = '';
+$status = '';
+$date = date('Y-m-d H:i:s');
+
+if(isset($_GET['edit'])){
+    $uid = $_GET['edit'];
+    $task = get_task($uid);
+    $title = $task['title'];
+    $date = $task['date'];
+    $status = $task['status'];
+    $progress = $task['progress'];
+}
 ?>
 <?php include 'partial/sidebar.php' ?>
 
@@ -56,17 +70,17 @@ if (isset($_POST['save_task'])) {
         <div class="col col-12">
             <div class="form-group">
                 <label for="title">نام کار</label>
-                <input type="text" class="form-control" id="title" name="title">
+                <input type="text" class="form-control" id="title" name="title" value="<?php echo $title ?>">
             </div>
         </div>
         <div class="col col-4">
             <div class="form-group">
                 <label for="status">وضعیت</label>
                 <select name="status" id="status" class="form-control">
-                    <option value="queue">در صف انجام</option>
-                    <option value="doing">در حال انجام</option>
-                    <option value="done">انجام شده</option>
-                    <option value="expire">منقضی شده</option>
+                    <option value="queue" <?php echo $status == 'queue' ? 'selected' : '' ?>>در صف انجام</option>
+                    <option value="doing" <?php echo $status == 'doing' ? 'selected' : '' ?>>در حال انجام</option>
+                    <option value="done" <?php echo $status == 'done' ? 'selected' : '' ?>>انجام شده</option>
+                    <option value="expire" <?php echo $status == 'expire' ? 'selected' : '' ?>>منقضی شده</option>
                 </select>
             </div>
         </div>
@@ -74,13 +88,14 @@ if (isset($_POST['save_task'])) {
             <div class="form-group">
                 <label for="progress">درصد پیشرفت</label>
                 <input type="number" min="0" max="100" step="1" class="form-control" id="progress" name="progress"
-                    value="0">
+                    value="<?php echo $progress ?>">
             </div>
         </div>
         <div class="col col-4">
             <div class="form-group">
                 <label for="date">مهلت زمانی</label>
-                <input type="text" min="0" max="100" step="1" class="form-control date-field" id="date" name="date">
+                <input type="text" min="0" max="100" step="1" class="form-control date-field" id="date" name="date"
+                value="<?php echo $date ?>">
             </div>
         </div>
         <div class="col col-12">
