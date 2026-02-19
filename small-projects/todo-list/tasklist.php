@@ -3,6 +3,12 @@ $page_name = 'tasklist';
 ?>
 <?php include 'partial/header.php' ?> 
 <?php
+//delete task
+// print_r($_GET);exit;
+if(isset($_GET['delete_task'])){
+    delete_task($_GET['delete_task']);
+}
+
 $tasks = get_user_tasks();
 sort_tasks($tasks);
 ?>
@@ -69,7 +75,7 @@ sort_tasks($tasks);
                                 <?php echo status_resolver($task['status']) ?>
                             </div>
                         </div>
-                        <a href="#" class="task-delete">
+                        <a href="?delete_task=<?php echo $task['uid'] ?>" class="task-delete" onclick="return confirm('آیا از حذف این تسک مطمئن هستید؟')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="19.5" height="21.5" viewBox="0 0 19.5 21.5">
                                 <g id="trash" transform="translate(-2.25 -1.25)">
                                     <path id="Path_42" data-name="Path 42" d="M3,6.73a.75.75,0,0,1-.072-1.5l2.04-.2a60.086,60.086,0,0,1,6.013-.3c3.325,0,6.722.169,10.094.5a.75.75,0,1,1-.148,1.493c-3.323-.329-6.67-.5-9.946-.5a58.594,58.594,0,0,0-5.865.3l-2.042.2C3.048,6.729,3.024,6.73,3,6.73Z" fill="#ff003d"/>

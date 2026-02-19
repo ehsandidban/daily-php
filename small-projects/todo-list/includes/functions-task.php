@@ -70,3 +70,11 @@ function sort_tasks(&$tasks){
         return $b['created_at'] <=> $a['created_at'];
     });
 }
+
+function delete_task($uid){
+    $tasks = get_user_tasks();
+    $tasks = array_filter($tasks, function ($task) use ($uid ){
+        return $task['uid'] != $uid;
+    });
+    save_user_tasks($tasks);
+}
