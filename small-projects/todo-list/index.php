@@ -57,7 +57,6 @@ $page_name = 'dashboard';
             </a>
         </header>
         <?php $tasks = get_user_tasks(3) ?>
-        <?php sort_tasks($tasks) ?>
         <?php if(!empty($tasks)): ?>
             <div class="widget-body">
             <?php include 'partial/task-card.php' ?>

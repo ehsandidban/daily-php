@@ -10,7 +10,6 @@ if(isset($_GET['delete_task'])){
 }
 
 $tasks = get_user_tasks();
-sort_tasks($tasks);
 ?>
 <?php include 'partial/sidebar.php' ?>
 

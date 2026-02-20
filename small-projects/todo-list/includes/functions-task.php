@@ -41,6 +41,8 @@ function get_user_tasks($limit = false)
             $tasks = unserialize($data);
     }
 
+    sort_tasks($tasks);
+
     if ($limit) {
         return array_slice($tasks, 0, $limit);
     }
