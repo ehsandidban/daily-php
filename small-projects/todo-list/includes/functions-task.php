@@ -91,3 +91,19 @@ function get_task($uid)
     }
     return false;
 }
+
+function edit_task($uid, $title, $status, $progress, $date){
+    $tasks = get_user_tasks();
+
+    foreach($tasks as $task_index => $task){
+        if($task['uid'] == $uid){
+            $tasks[$task_index]['title'] = $title;
+            $tasks[$task_index]['status'] = $status;
+            $tasks[$task_index]['progress'] = $progress;
+            $tasks[$task_index]['date'] = $date;
+            break;
+        }
+    }
+
+    save_user_tasks($tasks);
+}
