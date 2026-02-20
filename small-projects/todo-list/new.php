@@ -129,14 +129,14 @@ if (isset($_POST['save_task'])) {
         </div>
     </form>
 
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-        <script>
-            flatpickr(".date-field", {
-                enableTime  : true,
-                dateFormat  : "Y-m-d H:i:s",
-            });
-        </script>-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr(".date-field", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i:s",
+        });
+    </script>
 
 </main>
 <?php include 'partial/footer.php' ?>
