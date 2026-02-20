@@ -50,13 +50,14 @@ $page_name = 'dashboard';
                             fill="#292d32" />
                     </g>
                 </svg>
-                لیست کارهای اخیر شما
+                لیست کارهای شما
             </h2>
             <a href="tasklist.php">
                 مشاهده همه وظایف
             </a>
         </header>
         <?php $tasks = get_user_tasks(3) ?>
+        <?php sort_tasks($tasks) ?>
         <?php if(!empty($tasks)): ?>
             <div class="widget-body">
             <?php include 'partial/task-card.php' ?>

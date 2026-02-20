@@ -52,7 +52,7 @@
                     <?php echo status_resolver($task['status']) ?>
                 </div>
             </div>
-            <a href="?delete_task=<?php echo $task['uid'] ?>" class="task-delete"
+            <a href="tasklist.php?delete_task=<?php echo $task['uid'] ?>" class="task-delete"
                 onclick="return confirm('آیا از حذف این تسک مطمئن هستید؟')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="19.5" height="21.5" viewBox="0 0 19.5 21.5">
                     <g id="trash" transform="translate(-2.25 -1.25)">
